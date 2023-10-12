@@ -1,8 +1,8 @@
 //
-//  main.c
+//  2.c
 //  labOS
 //
-//  Created by Alyona Borushnova on 08.10.2023.
+//  Created by Alyona Borushnova on 11.10.2023.
 //
 
 #include <stdio.h>
@@ -12,8 +12,8 @@
 #include <errno.h>
 #include <string.h>
 
-int main(int argc, char *const argv[]) {
-    // insert code here...
+
+int main2(int argc, char *const argv[]) {
     int opt;
     const char *filename = NULL;
     int access_rights = 0;
@@ -48,7 +48,7 @@ int main(int argc, char *const argv[]) {
     printf("access_rights '%d'\n", access_rights);
 
     if (filename == NULL || access_rights == 0) {
-        fprintf(stderr, "Usage: %s (-[rw])+ <filename>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <filename> (-[rw])+\n", argv[0]);
         return 1;
     }
     
@@ -62,7 +62,7 @@ int main(int argc, char *const argv[]) {
     printf("File '%s' created successfully with access rights %s%s.\n", filename, (access_rights & S_IRUSR) ? "read" : "", (access_rights & S_IWUSR) ? "write" : "");
     
     // Step 2: Write some data to the file
-    const char *data = "This is some data written to the file.\n";
+    const char *data = "This is some data written to the file.";
     write(file_descriptor, data, strlen(data));
     close(file_descriptor);
     
@@ -70,7 +70,7 @@ int main(int argc, char *const argv[]) {
     file_descriptor = open(filename, O_RDONLY);
 
     if (file_descriptor == -1) {
-        perror("Error (open for reading)\n");
+        perror("Error (open for reading)");
     } else {
         printf("File '%s' opened successfully for reading.\n", filename);
 
@@ -90,7 +90,7 @@ int main(int argc, char *const argv[]) {
     file_descriptor = open(filename, O_RDWR);
 
     if (file_descriptor == -1) {
-        perror("Error (open for reading and writing)\n");
+        perror("Error (open for reading and writing)");
     } else {
         printf("File '%s' opened successfully for reading and writing.\n", filename);
         close(file_descriptor);
