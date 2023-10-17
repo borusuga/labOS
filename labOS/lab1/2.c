@@ -12,20 +12,18 @@
 #include <errno.h>
 #include <string.h>
 
-
 int main2(int argc, char *const argv[]) {
     int opt;
     const char *filename = NULL;
     int access_rights = 0;
     
     while ((opt = getopt(argc, argv, "rw")) != -1) {
-        printf("opt '%c'\n", opt);
         switch (opt) {
             case 'r':
-                access_rights |= S_IRUSR;
+                access_rights |= S_IRUSR | S_IRGRP | S_IROTH;
                 break;
             case 'w':
-                access_rights |= S_IWUSR;
+                access_rights |= S_IWUSR | S_IWGRP | S_IWOTH;
                 break;
             case '?':
                 if (optopt == 'r' || optopt == 'w') {
@@ -38,22 +36,18 @@ int main2(int argc, char *const argv[]) {
                 abort();
         }
     }
-    printf("optind '%d'\n", optind);
 
     if (optind < argc) {
         filename = argv[optind];
     }
-    
-    printf("filename '%s'\n", filename);
-    printf("access_rights '%d'\n", access_rights);
 
     if (filename == NULL || access_rights == 0) {
-        fprintf(stderr, "Usage: %s <filename> (-[rw])+\n", argv[0]);
+        fprintf(stderr, "Usage: %s (-[rw])+ <filename>\n", argv[0]);
         return 1;
     }
-    
+        
     // Step 1: Create a new file with specified access rights
-    int file_descriptor = open(filename, O_CREAT | O_WRONLY, access_rights);
+    int file_descriptor = open(filename, O_CREAT | O_RDONLY, access_rights);
 
     if (file_descriptor == -1) {
         perror("Error (open)");
@@ -78,11 +72,12 @@ int main2(int argc, char *const argv[]) {
         char buffer[256];
         ssize_t bytes_read;
 
-        printf("Contents of the file:\n");
-        while ((bytes_read = read(file_descriptor, buffer, sizeof(buffer))) > 0) {
-            write(STDOUT_FILENO, buffer, bytes_read);
+        bytes_read = read(file_descriptor, buffer, sizeof(buffer));
+        if (bytes_read < 0) {
+            perror("Error (read)");
+        } else {
+            printf("Message:\n%s\n(read %zd bytes)\n", buffer, bytes_read);
         }
-
         close(file_descriptor);
     }
 
