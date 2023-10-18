@@ -11,6 +11,10 @@
 		A2EF1A8A2AD2C60C00954B5D /* 1.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A892AD2C60C00954B5D /* 1.c */; };
 		A2EF1A8C2AD702F900954B5D /* 2.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A8B2AD702F900954B5D /* 2.c */; };
 		A2EF1A8E2AD942EB00954B5D /* 3.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A8D2AD942EB00954B5D /* 3.c */; };
+		A2EF1A902ADFC93B00954B5D /* 4.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A8F2ADFC93B00954B5D /* 4.c */; };
+		A2EF1A932ADFE59B00954B5D /* 5.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A922ADFE59B00954B5D /* 5.c */; };
+		A2EF1A952ADFE9F200954B5D /* 6.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A942ADFE9F200954B5D /* 6.c */; };
+		A2EF1A972ADFED4A00954B5D /* 7.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A962ADFED4A00954B5D /* 7.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,10 +32,14 @@
 /* Begin PBXFileReference section */
 		A2EF1A7D2AD2C57200954B5D /* labOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = labOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EF1A802AD2C57200954B5D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		A2EF1A882AD2C5CE00954B5D /* task1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = task1.rtf; sourceTree = "<group>"; };
 		A2EF1A892AD2C60C00954B5D /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
 		A2EF1A8B2AD702F900954B5D /* 2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 2.c; sourceTree = "<group>"; };
 		A2EF1A8D2AD942EB00954B5D /* 3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 3.c; sourceTree = "<group>"; };
+		A2EF1A8F2ADFC93B00954B5D /* 4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 4.c; sourceTree = "<group>"; };
+		A2EF1A912ADFC98900954B5D /* task.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = task.txt; sourceTree = "<group>"; };
+		A2EF1A922ADFE59B00954B5D /* 5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 5.c; sourceTree = "<group>"; };
+		A2EF1A942ADFE9F200954B5D /* 6.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 6.c; sourceTree = "<group>"; };
+		A2EF1A962ADFED4A00954B5D /* 7.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 7.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +81,14 @@
 		A2EF1A872AD2C58400954B5D /* lab1 */ = {
 			isa = PBXGroup;
 			children = (
-				A2EF1A882AD2C5CE00954B5D /* task1.rtf */,
 				A2EF1A892AD2C60C00954B5D /* 1.c */,
 				A2EF1A8B2AD702F900954B5D /* 2.c */,
 				A2EF1A8D2AD942EB00954B5D /* 3.c */,
+				A2EF1A8F2ADFC93B00954B5D /* 4.c */,
+				A2EF1A912ADFC98900954B5D /* task.txt */,
+				A2EF1A922ADFE59B00954B5D /* 5.c */,
+				A2EF1A942ADFE9F200954B5D /* 6.c */,
+				A2EF1A962ADFED4A00954B5D /* 7.c */,
 			);
 			path = lab1;
 			sourceTree = "<group>";
@@ -140,8 +152,12 @@
 			files = (
 				A2EF1A8C2AD702F900954B5D /* 2.c in Sources */,
 				A2EF1A812AD2C57200954B5D /* main.c in Sources */,
+				A2EF1A902ADFC93B00954B5D /* 4.c in Sources */,
+				A2EF1A972ADFED4A00954B5D /* 7.c in Sources */,
+				A2EF1A932ADFE59B00954B5D /* 5.c in Sources */,
 				A2EF1A8A2AD2C60C00954B5D /* 1.c in Sources */,
 				A2EF1A8E2AD942EB00954B5D /* 3.c in Sources */,
+				A2EF1A952ADFE9F200954B5D /* 6.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

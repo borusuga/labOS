@@ -47,7 +47,7 @@ int main2(int argc, char *const argv[]) {
     }
         
     // Step 1: Create a new file with specified access rights
-    int file_descriptor = open(filename, O_CREAT | O_RDONLY, access_rights);
+    int file_descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, access_rights);
 
     if (file_descriptor == -1) {
         perror("Error (open)");
