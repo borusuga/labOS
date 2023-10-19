@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2024B352AE1BCDC00781741 /* 8.c in Sources */ = {isa = PBXBuildFile; fileRef = A2024B342AE1BCDC00781741 /* 8.c */; };
 		A2EF1A812AD2C57200954B5D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A802AD2C57200954B5D /* main.c */; };
 		A2EF1A8A2AD2C60C00954B5D /* 1.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A892AD2C60C00954B5D /* 1.c */; };
 		A2EF1A8C2AD702F900954B5D /* 2.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A8B2AD702F900954B5D /* 2.c */; };
@@ -30,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A2024B342AE1BCDC00781741 /* 8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 8.c; sourceTree = "<group>"; };
 		A2EF1A7D2AD2C57200954B5D /* labOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = labOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EF1A802AD2C57200954B5D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A2EF1A892AD2C60C00954B5D /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
@@ -81,14 +83,15 @@
 		A2EF1A872AD2C58400954B5D /* lab1 */ = {
 			isa = PBXGroup;
 			children = (
+				A2EF1A912ADFC98900954B5D /* task.txt */,
 				A2EF1A892AD2C60C00954B5D /* 1.c */,
 				A2EF1A8B2AD702F900954B5D /* 2.c */,
 				A2EF1A8D2AD942EB00954B5D /* 3.c */,
 				A2EF1A8F2ADFC93B00954B5D /* 4.c */,
-				A2EF1A912ADFC98900954B5D /* task.txt */,
 				A2EF1A922ADFE59B00954B5D /* 5.c */,
 				A2EF1A942ADFE9F200954B5D /* 6.c */,
 				A2EF1A962ADFED4A00954B5D /* 7.c */,
+				A2024B342AE1BCDC00781741 /* 8.c */,
 			);
 			path = lab1;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2024B352AE1BCDC00781741 /* 8.c in Sources */,
 				A2EF1A8C2AD702F900954B5D /* 2.c in Sources */,
 				A2EF1A812AD2C57200954B5D /* main.c in Sources */,
 				A2EF1A902ADFC93B00954B5D /* 4.c in Sources */,

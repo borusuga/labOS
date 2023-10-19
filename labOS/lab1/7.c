@@ -14,7 +14,7 @@
 #include <sys/stat.h>
 
 
-int main(int argc, char *argv[]) {
+int main7(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "Usage: %s file\n", argv[0]);
         exit(EXIT_FAILURE);
