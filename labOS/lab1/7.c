@@ -13,8 +13,11 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
+//Написать программу для получения справочной информации о файлах с помощью системного вызова stat.
+//Имя файла передается в программу из командной строки.
+//Получить справочную информацию для различных типов файлов (обычный файл, каталог, специальные байт- и блок-ориентированные файлы).
 
-int main7(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "Usage: %s file\n", argv[0]);
         exit(EXIT_FAILURE);
@@ -22,6 +25,7 @@ int main7(int argc, char *argv[]) {
     struct stat statbuf = {0};
     stat(argv[1], &statbuf);
 
+    printf("File: %s\n", argv[1]);
     printf("ID of device containing file: %d\n", statbuf.st_dev);
     printf("Inode: %llu\n", statbuf.st_ino);
     printf("File type and mode: %u\n", statbuf.st_mode);

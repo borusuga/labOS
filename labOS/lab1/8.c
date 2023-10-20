@@ -10,6 +10,10 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+//Написать программу копирования одного файла в другой.
+//Имена файлов задаются в командной строке (первый аргумент - исходный файл, второй - результирующий).
+//Если аргументы командной строки отсутствуют, использовать стандартный ввод и стандартный вывод. Копирование файлов выполнить с помощью функции.
+
 #define BUF_SIZE 256
 
 // Function to copy data from source file descriptor to destination file descriptor
@@ -26,7 +30,7 @@ int copyFile(int source_fd, int dest_fd) {
     return 0;
 }
 
-int main8(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
     int source_fd, dest_fd;
 
     if (argc == 1) {

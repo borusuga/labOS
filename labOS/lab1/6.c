@@ -12,6 +12,8 @@
 #include <errno.h>
 #include <sys/stat.h>
 
+// Модифицировать программу п. 4 для создания разреженного файла.
+
 int main(int argc, char *const argv[]) {
     int opt;
     const char *filename = NULL;

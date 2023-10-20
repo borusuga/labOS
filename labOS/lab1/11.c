@@ -10,6 +10,10 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
+//Написать программу, которая определяет, какой файл из перечисленных в командной строке имеет наибольшую длину.
+//Вывести длину файла в байтах.
+
+
 int main(int argc, char *argv[]) {
     if (argc < 2) {
         fprintf(stderr, "Usage: %s [file1] [file2] [file3] ...\n", argv[0]);
@@ -32,6 +36,8 @@ int main(int argc, char *argv[]) {
             max_length = st.st_size;
             max_length_file = filename;
         }
+        
+        // or
     }
 
     if (max_length_file) {

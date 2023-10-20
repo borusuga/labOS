@@ -12,7 +12,10 @@
 #include <errno.h>
 #include <string.h>
 
-int main4(int argc, char *const argv[]) {
+//Используя программу п. 2, создать новый файл с правами на чтение и запись;
+//выполнить любые операции с файлом (чтение и/или запись), используя разные способы позиционирования. Объяснить полученные результаты.
+
+int main(int argc, char *const argv[]) {
     int opt;
     const char *filename = NULL;
     int access_rights = 0;

@@ -12,7 +12,11 @@
 #include <errno.h>
 #include <string.h>
 
-int main5(int argc, char *const argv[]) {
+// Повторно выполнить программу п. 4;
+//проверить результаты выполнения каждого системного вызова. Объяснить полученные результаты.
+
+
+int main(int argc, char *const argv[]) {
     int opt;
     const char *filename = NULL;
     int access_rights = 0;

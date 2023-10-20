@@ -12,7 +12,11 @@
 #include <errno.h>
 #include <string.h>
 
-int main1(int argc, const char * argv[]) {
+//Написать программу, которая выполняет некоторый системный вызов, например open, и затем выводит возвращаемую ошибку.
+//Использовать в программе разные способы вывода сообщения об ошибке:
+//вывод значения errno, вывод соответствующего сообщения из системного массива сообщений об ошибках sys_errlist[], вызов библиотечной функции perror.
+
+int main(int argc, const char * argv[]) {
     const char *filename = argv[1];
     int file_descriptor = open(filename, O_RDONLY);
     printf("Task 1\n");
