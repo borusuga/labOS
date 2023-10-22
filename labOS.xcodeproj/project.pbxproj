@@ -11,6 +11,7 @@
 		A2024B372AE1CB1800781741 /* 9.c in Sources */ = {isa = PBXBuildFile; fileRef = A2024B362AE1CB1800781741 /* 9.c */; };
 		A2024B392AE1D5DE00781741 /* 10.c in Sources */ = {isa = PBXBuildFile; fileRef = A2024B382AE1D5DE00781741 /* 10.c */; };
 		A2024B3B2AE1D73400781741 /* 11.c in Sources */ = {isa = PBXBuildFile; fileRef = A2024B3A2AE1D73400781741 /* 11.c */; };
+		A2E4E7362AE4880700986FE9 /* 1.c in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E7352AE4880700986FE9 /* 1.c */; };
 		A2EF1A812AD2C57200954B5D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A802AD2C57200954B5D /* main.c */; };
 		A2EF1A8A2AD2C60C00954B5D /* 1.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A892AD2C60C00954B5D /* 1.c */; };
 		A2EF1A8C2AD702F900954B5D /* 2.c in Sources */ = {isa = PBXBuildFile; fileRef = A2EF1A8B2AD702F900954B5D /* 2.c */; };
@@ -39,6 +40,7 @@
 		A2024B382AE1D5DE00781741 /* 10.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 10.c; sourceTree = "<group>"; };
 		A2024B3A2AE1D73400781741 /* 11.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 11.c; sourceTree = "<group>"; };
 		A2E4E7342AE429FC00986FE9 /* task.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = task.txt; sourceTree = "<group>"; };
+		A2E4E7352AE4880700986FE9 /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
 		A2EF1A7D2AD2C57200954B5D /* labOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = labOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EF1A802AD2C57200954B5D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A2EF1A892AD2C60C00954B5D /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E4E7342AE429FC00986FE9 /* task.txt */,
+				A2E4E7352AE4880700986FE9 /* 1.c */,
 			);
 			path = lab2;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				A2024B352AE1BCDC00781741 /* 8.c in Sources */,
 				A2EF1A8C2AD702F900954B5D /* 2.c in Sources */,
 				A2EF1A812AD2C57200954B5D /* main.c in Sources */,
+				A2E4E7362AE4880700986FE9 /* 1.c in Sources */,
 				A2EF1A902ADFC93B00954B5D /* 4.c in Sources */,
 				A2EF1A972ADFED4A00954B5D /* 7.c in Sources */,
 				A2EF1A932ADFE59B00954B5D /* 5.c in Sources */,
