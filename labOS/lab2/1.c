@@ -12,7 +12,7 @@
 
 extern char **environ;
 
-void add_string() {
+void add_string(void) {
     char *str = calloc(80, sizeof(char));
     printf("enter string: ");
     scanf("%s", str);
@@ -20,7 +20,7 @@ void add_string() {
     putenv(str);
 }
 
-void print_env() {
+void print_env(void) {
     char *var_name = calloc(80, sizeof(char));
     printf("enter var name: ");
     scanf("%s", var_name);
