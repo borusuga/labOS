@@ -16,8 +16,12 @@ void add_string(void) {
     char *str = calloc(80, sizeof(char));
     printf("enter string: ");
     scanf("%s", str);
-
-    putenv(str);
+//    "NEW_VARIABLE=SomeNewValue"
+    if (putenv(str) == 0) {
+        printf("Added NEW_VARIABLE to the environment.\n");
+    } else {
+        perror("Error adding NEW_VARIABLE");
+    }
 }
 
 void print_env(void) {
@@ -30,7 +34,7 @@ void print_env(void) {
         printf("%s\n", value);
     }
     else {
-        printf("No value found\n");
+        perror("No value found\n");
     }
     free(var_name);
 }
@@ -38,7 +42,7 @@ void print_env(void) {
 int main(int argc, char *argv[]) {
     int r, s = 1;
     do {
-        printf("0 - add string\n1 - get env var\n* - get env\n");
+        printf("0 - add string\n1 - get env var\n2 - get env\n");
         s = scanf("%d", &r);
         switch(r) {
             case 0:
