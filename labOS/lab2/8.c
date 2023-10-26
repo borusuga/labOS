@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
             exit(1);
         }
 
-        char buffer[4096];
+        char buffer[1];
         ssize_t bytesRead;
 
         while ((bytesRead = read(fd, buffer, sizeof(buffer))) > 0) {
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
             return 1;
         }
 
-        char buffer[4096];
+        char buffer[1];
         ssize_t bytesRead;
 
         while ((bytesRead = read(fd, buffer, sizeof(buffer))) > 0) {
