@@ -5,6 +5,10 @@
 //  Created by Alyona Borushnova on 25.10.2023.
 //
 
+/*
+ ./l2_4b
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -12,7 +16,10 @@
 
 // более структурированная
 
-// Изменить программу п. 3 так, чтобы родительский процесс завершился раньше порожденного. Какой процесс становится родительским для порожденного после того, как исходный родительский процесс завершился?
+// Изменить программу п. 3 так, чтобы родительский процесс завершился раньше порожденного.
+
+// Какой процесс становится родительским для порожденного после того, как исходный родительский процесс завершился?
+// -> ppid=1
 
 void child(void) {
     // Код, выполняемый дочерним процессом
@@ -32,14 +39,14 @@ void child(void) {
 }
 
 void parent(void) {
-    printf("Parent process (PID: %d, Parent PID: %d, Group ID: %d)\n",
-           getpid(), getppid(), getpgrp());
+//    printf("Parent process (PID: %d, Parent PID: %d, Group ID: %d)\n",
+//           getpid(), getppid(), getpgrp());
     
     pid_t pid = fork();
     if (pid == 0) {
         child();
     } else {
-        printf("Child process (PID: %d, Parent PID: %d, Group ID: %d)\n",
+        printf("Parent process (PID: %d, Parent PID: %d, Group ID: %d)\n",
                getpid(), getppid(), getpgrp());
         // Завершение родительского
         printf("Parent process terminated.\n");

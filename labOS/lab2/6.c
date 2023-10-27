@@ -5,6 +5,11 @@
 //  Created by Alyona Borushnova on 25.10.2023.
 //
 
+/*
+ ./l2_6 &
+ ./l2_6
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -17,8 +22,8 @@
 // -> оба прервались
 
 // Можно ли получить такой же результат, если нажать клавишу прерывания после того, как родительский процесс завершится?
-// -> Нажав CTRL-C после того, как родительский процесс завершится, ничего не произойдет, так как порожденный процесс уже стал зомби и ожидает завершения.
-// ->не
+// -> ничего не произойдет, так как порожденный процесс уже стал сиротой и не входит в группу терминала.
+
 void child_process(void) {
     printf("Child process (PID: %d, PPID: %d) is running.\n", getpid(), getppid());
     pause(); // Child process pauses, waiting for a signal
@@ -41,7 +46,7 @@ void parent_process(void) {
         // Uncomment the next line and run it from the terminal (be careful!)
         //kill(getpid(), SIGKILL);
         
-//        pause(); // Parent process pauses, waiting for a signal
+        pause(); // Parent process pauses, waiting for a signal
         printf("Parent process resumes after receiving a signal.\n");
     }
 }

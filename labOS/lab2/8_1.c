@@ -5,6 +5,10 @@
 //  Created by Alyona Borushnova on 25.10.2023.
 //
 
+/*
+ ./l2_8_1 input.txt 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -14,6 +18,7 @@
 #include <sys/wait.h>
 
 // Посмотреть, что изменится, если читаемую процессами информацию сразу выводить на экран.
+// -> все норм выведется 
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -39,28 +44,34 @@ int main(int argc, char *argv[]) {
 
     if (childPid == 0) {  // Child process
 
-        char buffer[4096];
+        char buffer[1];
         ssize_t bytesRead;
-        
+
+        printf("Contents of child output:\n");
 
         while ((bytesRead = read(fd, buffer, sizeof(buffer))) > 0) {
-            if (write(STDOUT_FILENO, buffer, bytesRead) == -1) {
-                perror("Error writing to child output");
+            char newbuf[2];
+            newbuf[0] = buffer[0];
+            newbuf[1] = '+';
+            if (write(STDOUT_FILENO, newbuf , bytesRead + 1) == -1) {
+                perror("Error writing to child output file");
                 exit(1);
             }
         }
-        
+
         exit(0);
     } else {  // Parent process
 
-        char buffer[4096];
+        char buffer[1];
         ssize_t bytesRead;
 
-        printf("Contents of parent_output.txt:\n");
-        
+        printf("\nContents of parent output:\n");
         while ((bytesRead = read(fd, buffer, sizeof(buffer))) > 0) {
-            if (write(STDOUT_FILENO, buffer, bytesRead) == -1) {
-                perror("Error writing to parent output");
+            char newbuf[2];
+            newbuf[0] = buffer[0];
+            newbuf[1] = '-';
+            if (write(STDOUT_FILENO, newbuf, bytesRead+1) == -1) {
+                perror("Error writing to parent output file");
                 return 1;
             }
         }
@@ -73,3 +84,4 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 }
+

@@ -13,16 +13,18 @@
 // Модифицировать программу, включив в нее setpgrp в порожденный процесс до того, как он будет выполнять pause.
 
 // Повлияет ли на порожденный процесс нажатие клавиши прерывания в тот момент, когда родительский процесс "спит"?
-// ->  нет, если  sleep
+// -> нет
 
 // Будет ли показан порожденный процесс в выводе команды ps?
-// -> если спит, то нет
+// -> да
 
 void child_process(void) {
     printf("Child process (PID: %d, Parent PID: %d, Group ID: %d)\n", getpid(), getppid(), getpgrp());
     setpgrp();
     printf("Child process after setpgrp (PID: %d, Parent PID: %d, Group ID: %d)\n", getpid(), getppid(), getpgrp());
+    
     pause(); // Child process pauses, waiting for a signal
+    
     printf("Child process (PID: %d, PPID: %d) is running.\n", getpid(), getppid());
     printf("Child process resumes after receiving a signal.\n");
     exit(EXIT_SUCCESS);
@@ -43,7 +45,8 @@ void parent_process(void) {
         // Uncomment the next line and run it from the terminal (be careful!)
         //kill(getpid(), SIGKILL);
         
-        pause(); // Parent process pauses, waiting for a signal
+//        pause(); // Parent process pauses, waiting for a signal
+        sleep(10);
         printf("Parent process resumes after receiving a signal.\n");
         exit(EXIT_SUCCESS);
     }

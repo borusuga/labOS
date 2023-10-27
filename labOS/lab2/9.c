@@ -5,6 +5,10 @@
 //  Created by Alyona Borushnova on 25.10.2023.
 //
 
+/*
+ ./l2_9 input.txt
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -14,6 +18,7 @@
 #include <sys/wait.h>
 
 // Выполнить п. 8 при условии, что общий файл для чтения открывается в каждом из порожденных процессов.
+// -> все ок
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -39,7 +44,7 @@ int main(int argc, char *argv[]) {
             return 1;
         }
         
-        int childOutputFile = open("child_output.txt", O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+        int childOutputFile = open("child_output1.txt", O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
         if (childOutputFile == -1) {
             perror("Error opening child output file");
             exit(1);
@@ -56,7 +61,7 @@ int main(int argc, char *argv[]) {
         }
 
         close(childOutputFile);
-        close(fd_parent);
+        close(fd_child);
 
         exit(0);
     } else {  // Parent process
@@ -65,7 +70,7 @@ int main(int argc, char *argv[]) {
             perror("Error opening input file");
             return 1;
         }
-        int parentOutputFile = open("parent_output.txt", O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+        int parentOutputFile = open("parent_output1.txt", O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
         if (parentOutputFile == -1) {
             perror("Error opening parent output file");
             return 1;
@@ -90,10 +95,10 @@ int main(int argc, char *argv[]) {
     }
     
     // Now we can display the contents of the output files
-    printf("Contents of child_output.txt:\n");
+    printf("Contents of child_output1.txt:\n");
     system("cat child_output.txt");
 
-    printf("\nContents of parent_output.txt:\n");
+    printf("\nContents of parent_output1.txt:\n");
     system("cat parent_output.txt");
 
     return 0;

@@ -5,6 +5,10 @@
 //  Created by Alyona Borushnova on 25.10.2023.
 //
 
+/*
+ ./l2_10 l2_1_for10 qwert rt
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -34,20 +38,15 @@ int main(int argc, char *argv[]) {
         // Child process
         printf("Child process (PID: %d) arguments:\n", getpid());
         for (int i = 1; i < argc; i++) {
-            printf("Arg %d: %s\n", i, argv[i]);
-        }
-
-        char **env = environ;
-        printf("Child process environment:\n");
-        while (*env) {
-            printf("%s\n", *env);
-            env++;
+            printf("Arg %d: %s\n", i-1, argv[i]);
         }
 
         // Execute the specified program with the provided arguments
         execv(executable, &argv[1]);
-
+        
         perror("Exec failed");
+
+        
         exit(1);
     } else {
         // Parent process
@@ -59,7 +58,7 @@ int main(int argc, char *argv[]) {
         }
 
         printf("Parent process (PID: %d) arguments:\n", getpid());
-        for (int i = 1; i < argc; i++) {
+        for (int i = 0; i < argc; i++) {
             printf("Arg %d: %s\n", i, argv[i]);
         }
 
@@ -73,3 +72,5 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+// нельзя совмещать потому что возникает противоречие с какого окружении брать перемену из старого или нового

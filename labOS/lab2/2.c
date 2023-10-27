@@ -5,6 +5,10 @@
 //  Created by Alyona Borushnova on 24.10.2023.
 //
 
+/*
+ ./l2_2
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

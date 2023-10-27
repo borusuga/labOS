@@ -5,6 +5,10 @@
 //  Created by Alyona Borushnova on 25.10.2023.
 //
 
+/*
+ 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -25,20 +29,20 @@ void parent(void) {
     printf("Parent process (PID: %d, Parent PID: %d, Group ID: %d)\n",
            getpid(), getppid(), getpgrp());
 
-  pid_t pid = fork();
-  if (pid == 0) {
-    child();
-  } else {
-    printf("Waiting for child process to terminate...\n");
-    int status;
-    waitpid(pid, &status, 0);
-    printf("Child process terminated with status: %d\n", WEXITSTATUS(status));
-    printf("Ending parent process...\n");
-    exit(0);
-  }
+    pid_t pid = fork();
+    if (pid == 0) {
+        child();
+    } else {
+        printf("Waiting for child process to terminate...\n");
+        int status;
+        waitpid(pid, &status, 0);
+        printf("Child process terminated with status: %d\n", WEXITSTATUS(status));
+        printf("Ending parent process...\n");
+        exit(0);
+    }
 }
 
 int main(int argc, char *argv[]) {
-  parent();
-  return 0;
+    parent();
+    return 0;
 }
