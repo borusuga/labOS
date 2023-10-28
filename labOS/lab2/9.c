@@ -96,10 +96,10 @@ int main(int argc, char *argv[]) {
     
     // Now we can display the contents of the output files
     printf("Contents of child_output1.txt:\n");
-    system("cat child_output.txt");
+    system("cat child_output1.txt");
 
     printf("\nContents of parent_output1.txt:\n");
-    system("cat parent_output.txt");
+    system("cat parent_output1.txt");
 
     return 0;
     

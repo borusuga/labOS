@@ -25,6 +25,8 @@ void child(void) {
     // Код, выполняемый дочерним процессом
     pid_t  parent_pid = getppid();
     
+    printf("Child process (PID: %d, Parent PID: %d, Group ID: %d)\n",
+           getpid(), getppid(), getpgrp());
     // Ждём завершения родителя
     waitpid(parent_pid, NULL, 0);
     
@@ -48,6 +50,7 @@ void parent(void) {
     } else {
         printf("Parent process (PID: %d, Parent PID: %d, Group ID: %d)\n",
                getpid(), getppid(), getpgrp());
+//        sleep(1);
         // Завершение родительского
         printf("Parent process terminated.\n");
         exit(0);
