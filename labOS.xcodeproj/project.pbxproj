@@ -73,6 +73,7 @@
 		A2E4E7532AE97D9200986FE9 /* 11_fork_exec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 11_fork_exec.c; sourceTree = "<group>"; };
 		A2E4E7562AE97DA100986FE9 /* 11_sys.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 11_sys.c; sourceTree = "<group>"; };
 		A2E4E7582AEBBD1800986FE9 /* 1_for10.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1_for10.c; sourceTree = "<group>"; };
+		A2E4E75B2AEE768900986FE9 /* task.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = task.txt; sourceTree = "<group>"; };
 		A2EF1A7D2AD2C57200954B5D /* labOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = labOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EF1A802AD2C57200954B5D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A2EF1A892AD2C60C00954B5D /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
@@ -121,6 +122,14 @@
 			path = lab2;
 			sourceTree = "<group>";
 		};
+		A2E4E75A2AEE765A00986FE9 /* lab3 */ = {
+			isa = PBXGroup;
+			children = (
+				A2E4E75B2AEE768900986FE9 /* task.txt */,
+			);
+			path = lab3;
+			sourceTree = "<group>";
+		};
 		A2EF1A742AD2C57200954B5D = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +151,7 @@
 			children = (
 				A2EF1A872AD2C58400954B5D /* lab1 */,
 				A2E4E7332AE429B900986FE9 /* lab2 */,
+				A2E4E75A2AEE765A00986FE9 /* lab3 */,
 				A2EF1A802AD2C57200954B5D /* main.c */,
 			);
 			path = labOS;
