@@ -11,6 +11,7 @@
 		A2024B372AE1CB1800781741 /* 9.c in Sources */ = {isa = PBXBuildFile; fileRef = A2024B362AE1CB1800781741 /* 9.c */; };
 		A2024B392AE1D5DE00781741 /* 10.c in Sources */ = {isa = PBXBuildFile; fileRef = A2024B382AE1D5DE00781741 /* 10.c */; };
 		A2024B3B2AE1D73400781741 /* 11.c in Sources */ = {isa = PBXBuildFile; fileRef = A2024B3A2AE1D73400781741 /* 11.c */; };
+		A25EF0CD2AF036920027DAFC /* 1.c in Sources */ = {isa = PBXBuildFile; fileRef = A25EF0CC2AF036920027DAFC /* 1.c */; };
 		A2E4E7362AE4880700986FE9 /* 1.c in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E7352AE4880700986FE9 /* 1.c */; };
 		A2E4E7382AE83C8400986FE9 /* 2.c in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E7372AE83C8400986FE9 /* 2.c */; };
 		A2E4E73C2AE9273600986FE9 /* 3.c in Sources */ = {isa = PBXBuildFile; fileRef = A2E4E73B2AE9273600986FE9 /* 3.c */; };
@@ -55,6 +56,7 @@
 		A2024B362AE1CB1800781741 /* 9.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 9.c; sourceTree = "<group>"; };
 		A2024B382AE1D5DE00781741 /* 10.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 10.c; sourceTree = "<group>"; };
 		A2024B3A2AE1D73400781741 /* 11.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 11.c; sourceTree = "<group>"; };
+		A25EF0CC2AF036920027DAFC /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
 		A2E4E7342AE429FC00986FE9 /* task.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = task.txt; sourceTree = "<group>"; };
 		A2E4E7352AE4880700986FE9 /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
 		A2E4E7372AE83C8400986FE9 /* 2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 2.c; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E4E75B2AEE768900986FE9 /* task.txt */,
+				A25EF0CC2AF036920027DAFC /* 1.c */,
 			);
 			path = lab3;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				A2E4E7522AE97B0F00986FE9 /* 10.c in Sources */,
 				A2E4E74E2AE977DE00986FE9 /* 8_1.c in Sources */,
 				A2E4E7482AE9611400986FE9 /* 6.c in Sources */,
+				A25EF0CD2AF036920027DAFC /* 1.c in Sources */,
 				A2E4E7592AEBBD1800986FE9 /* 1_for10.c in Sources */,
 				A2E4E74A2AE970AD00986FE9 /* 7.c in Sources */,
 				A2EF1A902ADFC93B00954B5D /* 4.c in Sources */,
