@@ -1,5 +1,5 @@
 //
-//  11_term.c
+//  11.c
 //  labOS
 //
 //  Created by Alyona Borushnova on 08.11.2023.
